@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this code or resource, please cite the associated manuscript."
+title: "HR-StateSL: code and curated edge resource"
+abstract: "Analysis code, stored results and the curated, evidence-typed, state-conditioned edge resource accompanying the manuscript on pooling and sign-reversing synthetic lethality in breast cancer."
+authors:
+  - family-names: "Thakar"
+    given-names: "Sambhaji Balaso"
+    orcid: "https://orcid.org/0000-0002-0423-2015"
+  - family-names: "Ghorpade"
+    given-names: "Pradnya Namdev"
+    orcid: "https://orcid.org/0000-0001-6593-825X"
+license: MIT

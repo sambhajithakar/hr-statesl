@@ -1,0 +1,76 @@
+{
+  "n_edges": 26,
+  "n_distinct_gene_a": 18,
+  "by_evidence_class": {
+    "E6-textual-only": 10,
+    "E1-interventional-isogenic": 5,
+    "E3-pharmacological-rescue": 4,
+    "E4-clinical-observational": 4,
+    "E2-interventional-screen": 3
+  },
+  "by_causal_support": {
+    "low": 10,
+    "high": 8,
+    "medium": 8
+  },
+  "by_direction": {
+    "SL-combination": 8,
+    "state-defining": 7,
+    "SL": 6,
+    "anti-SL": 3,
+    "resistance-driver": 2
+  },
+  "by_hr_state": {
+    "HRD-BRCA2": 8,
+    "HRD-BRCA1": 6,
+    "HRD-signature-only": 4,
+    "HR-proficient": 3,
+    "HRR-fork-protection": 3,
+    "HRR-reversion-DNA": 3,
+    "non-HRD-replication-stress": 3,
+    "HRR-reversion-largedel": 2,
+    "HRR-53BP1-loss": 1,
+    "HRR-reversion-splice": 1,
+    "HRR-trapping-loss": 1
+  },
+  "by_ctdna_detectability": {
+    "detectable": 14,
+    "not-applicable": 5,
+    "signature-inferred": 4,
+    "often-missed": 3
+  },
+  "n_interventional": 8,
+  "frac_interventional": 0.3077,
+  "n_low_support": 10,
+  "frac_low_support": 0.3846,
+  "n_target_like_edges": 17,
+  "target_like_by_causal_support": {
+    "high": 6,
+    "medium": 4,
+    "low": 7
+  },
+  "frac_target_like_low_support": 0.4118,
+  "sign_discordant_genes": [
+    "FANCM"
+  ],
+  "n_sign_discordant_genes": 1,
+  "discordant_states": {
+    "FANCM": [
+      "HRD-BRCA1",
+      "HRD-BRCA2"
+    ]
+  },
+  "anti_sl_genes": [
+    "FANCM",
+    "RMI1",
+    "RMI2"
+  ],
+  "n_anti_sl_genes": 3,
+  "n_edges_flagged_non_breast_origin": 2,
+  "edges_flagged_non_breast_origin": [
+    "HRSL010",
+    "HRSL023"
+  ],
+  "n_distinct_sources": 18,
+  "n_preprint_sourced": 1
+}

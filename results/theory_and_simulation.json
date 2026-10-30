@@ -1,0 +1,1728 @@
+{
+  "A_theory": {
+    "statement": "pooled estimand equals the prevalence-weighted mean of the per-state effects; it vanishes at r = pi1/pi2 regardless of how large the per-state effects are",
+    "attenuation_table": {
+      "pi1=0.50": {
+        "r=0.25": 0.375,
+        "r=0.50": 0.25,
+        "r=0.75": 0.125,
+        "r=1.00": 0.0,
+        "r=1.50": 0.1667,
+        "r=2.00": 0.25
+      },
+      "pi1=0.55": {
+        "r=0.25": 0.4375,
+        "r=0.50": 0.325,
+        "r=0.75": 0.2125,
+        "r=1.00": 0.1,
+        "r=1.50": 0.0833,
+        "r=2.00": 0.175
+      },
+      "pi1=0.60": {
+        "r=0.25": 0.5,
+        "r=0.50": 0.4,
+        "r=0.75": 0.3,
+        "r=1.00": 0.2,
+        "r=1.50": 0.0,
+        "r=2.00": 0.1
+      },
+      "pi1=0.65": {
+        "r=0.25": 0.5625,
+        "r=0.50": 0.475,
+        "r=0.75": 0.3875,
+        "r=1.00": 0.3,
+        "r=1.50": 0.0833,
+        "r=2.00": 0.025
+      },
+      "pi1=0.70": {
+        "r=0.25": 0.625,
+        "r=0.50": 0.55,
+        "r=0.75": 0.475,
+        "r=1.00": 0.4,
+        "r=1.50": 0.1667,
+        "r=2.00": 0.05
+      }
+    },
+    "pooled_sample_size_inflation_factor": {
+      "pi1=0.50": {
+        "r=0.25": 7.11,
+        "r=0.50": 16.0,
+        "r=0.75": 64.0,
+        "r=1.00": null,
+        "r=1.50": 36.0,
+        "r=2.00": 16.0
+      },
+      "pi1=0.55": {
+        "r=0.25": 5.22,
+        "r=0.50": 9.47,
+        "r=0.75": 22.15,
+        "r=1.00": 100.0,
+        "r=1.50": 144.0,
+        "r=2.00": 32.65
+      },
+      "pi1=0.60": {
+        "r=0.25": 4.0,
+        "r=0.50": 6.25,
+        "r=0.75": 11.11,
+        "r=1.00": 25.0,
+        "r=1.50": 1.8254168643286503e+32,
+        "r=2.00": 100.0
+      },
+      "pi1=0.65": {
+        "r=0.25": 3.16,
+        "r=0.50": 4.43,
+        "r=0.75": 6.66,
+        "r=1.00": 11.11,
+        "r=1.50": 144.0,
+        "r=2.00": 1600.0
+      },
+      "pi1=0.70": {
+        "r=0.25": 2.56,
+        "r=0.50": 3.31,
+        "r=0.75": 4.43,
+        "r=1.00": 6.25,
+        "r=1.50": 36.0,
+        "r=2.00": 400.0
+      }
+    },
+    "cancellation_ratio_r_star": {
+      "pi1=0.50": 1.0,
+      "pi1=0.55": 1.2222,
+      "pi1=0.60": 1.5,
+      "pi1=0.65": 1.8571,
+      "pi1=0.70": 2.3333
+    }
+  },
+  "B_estimation": {
+    "n_replicates": 200,
+    "generative_parameters": {
+      "G": 2000,
+      "n_cell_lines_total": 40,
+      "pi1": 0.6,
+      "sigma": 1.0,
+      "effect_size_b": 1.0,
+      "reversal_ratio_r": 1.0,
+      "f_sign_discordant": 0.06,
+      "f_concordant": 0.08,
+      "f_state_specific": 0.06,
+      "k": 50
+    },
+    "baseline": {
+      "state_conditioned": {
+        "precision_at_k": {
+          "mean": 0.9998,
+          "sd": 0.002,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3138,
+          "sd": 0.0245,
+          "ci95": [
+            0.2659,
+            0.3623
+          ]
+        }
+      },
+      "pooled": {
+        "precision_at_k": {
+          "mean": 0.9959,
+          "sd": 0.0088,
+          "ci95": [
+            0.98,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3126,
+          "sd": 0.0245,
+          "ci95": [
+            0.2646,
+            0.3623
+          ]
+        }
+      },
+      "discordant_sign_recovered_state_conditioned": {
+        "mean": 1.0,
+        "sd": 0.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "discordant_sign_recovered_pooled": {
+        "mean": 0.0,
+        "sd": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_abs_pooled_estimate_discordant": {
+        "mean": 0.2152,
+        "sd": 0.0131,
+        "ci95": [
+          0.1903,
+          0.2399
+        ]
+      },
+      "mean_abs_stratified_estimate_discordant": {
+        "mean": 1.003,
+        "sd": 0.0146,
+        "ci95": [
+          0.9723,
+          1.0314
+        ]
+      }
+    }
+  },
+  "B_sweeps": {
+    "f_disc=0.02": {
+      "state_conditioned": {
+        "precision_at_k": {
+          "mean": 0.9998,
+          "sd": 0.002,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.314,
+          "sd": 0.0238,
+          "ci95": [
+            0.2717,
+            0.3625
+          ]
+        }
+      },
+      "pooled": {
+        "precision_at_k": {
+          "mean": 0.9969,
+          "sd": 0.0085,
+          "ci95": [
+            0.9795,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3131,
+          "sd": 0.0233,
+          "ci95": [
+            0.2717,
+            0.3598
+          ]
+        }
+      },
+      "discordant_sign_recovered_state_conditioned": {
+        "mean": 1.0,
+        "sd": 0.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "discordant_sign_recovered_pooled": {
+        "mean": 0.0,
+        "sd": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_abs_pooled_estimate_discordant": {
+        "mean": 0.2162,
+        "sd": 0.0217,
+        "ci95": [
+          0.177,
+          0.2574
+        ]
+      },
+      "mean_abs_stratified_estimate_discordant": {
+        "mean": 1.0014,
+        "sd": 0.0267,
+        "ci95": [
+          0.9436,
+          1.0533
+        ]
+      }
+    },
+    "f_disc=0.06": {
+      "state_conditioned": {
+        "precision_at_k": {
+          "mean": 0.9998,
+          "sd": 0.002,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3138,
+          "sd": 0.0245,
+          "ci95": [
+            0.2659,
+            0.3623
+          ]
+        }
+      },
+      "pooled": {
+        "precision_at_k": {
+          "mean": 0.9959,
+          "sd": 0.0088,
+          "ci95": [
+            0.98,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3126,
+          "sd": 0.0245,
+          "ci95": [
+            0.2646,
+            0.3623
+          ]
+        }
+      },
+      "discordant_sign_recovered_state_conditioned": {
+        "mean": 1.0,
+        "sd": 0.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "discordant_sign_recovered_pooled": {
+        "mean": 0.0,
+        "sd": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_abs_pooled_estimate_discordant": {
+        "mean": 0.2152,
+        "sd": 0.0131,
+        "ci95": [
+          0.1903,
+          0.2399
+        ]
+      },
+      "mean_abs_stratified_estimate_discordant": {
+        "mean": 1.003,
+        "sd": 0.0146,
+        "ci95": [
+          0.9723,
+          1.0314
+        ]
+      }
+    },
+    "f_disc=0.1": {
+      "state_conditioned": {
+        "precision_at_k": {
+          "mean": 0.9999,
+          "sd": 0.0014,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.312,
+          "sd": 0.0226,
+          "ci95": [
+            0.2717,
+            0.3597
+          ]
+        }
+      },
+      "pooled": {
+        "precision_at_k": {
+          "mean": 0.9958,
+          "sd": 0.0097,
+          "ci95": [
+            0.96,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3107,
+          "sd": 0.0226,
+          "ci95": [
+            0.2717,
+            0.3525
+          ]
+        }
+      },
+      "discordant_sign_recovered_state_conditioned": {
+        "mean": 1.0,
+        "sd": 0.0004,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "discordant_sign_recovered_pooled": {
+        "mean": 0.0,
+        "sd": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_abs_pooled_estimate_discordant": {
+        "mean": 0.215,
+        "sd": 0.0098,
+        "ci95": [
+          0.1964,
+          0.2325
+        ]
+      },
+      "mean_abs_stratified_estimate_discordant": {
+        "mean": 1.0022,
+        "sd": 0.011,
+        "ci95": [
+          0.9804,
+          1.0227
+        ]
+      }
+    },
+    "f_disc=0.15": {
+      "state_conditioned": {
+        "precision_at_k": {
+          "mean": 0.9999,
+          "sd": 0.0014,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3105,
+          "sd": 0.0226,
+          "ci95": [
+            0.2707,
+            0.3546
+          ]
+        }
+      },
+      "pooled": {
+        "precision_at_k": {
+          "mean": 0.9964,
+          "sd": 0.0087,
+          "ci95": [
+            0.98,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3093,
+          "sd": 0.0223,
+          "ci95": [
+            0.2674,
+            0.3546
+          ]
+        }
+      },
+      "discordant_sign_recovered_state_conditioned": {
+        "mean": 1.0,
+        "sd": 0.0003,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "discordant_sign_recovered_pooled": {
+        "mean": 0.0,
+        "sd": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_abs_pooled_estimate_discordant": {
+        "mean": 0.2156,
+        "sd": 0.0075,
+        "ci95": [
+          0.1996,
+          0.2292
+        ]
+      },
+      "mean_abs_stratified_estimate_discordant": {
+        "mean": 1.0014,
+        "sd": 0.0091,
+        "ci95": [
+          0.9832,
+          1.0187
+        ]
+      }
+    },
+    "r=0.5": {
+      "state_conditioned": {
+        "precision_at_k": {
+          "mean": 0.9998,
+          "sd": 0.002,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3138,
+          "sd": 0.0245,
+          "ci95": [
+            0.2659,
+            0.3623
+          ]
+        }
+      },
+      "pooled": {
+        "precision_at_k": {
+          "mean": 0.9959,
+          "sd": 0.0088,
+          "ci95": [
+            0.98,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3126,
+          "sd": 0.0245,
+          "ci95": [
+            0.2646,
+            0.3623
+          ]
+        }
+      },
+      "discordant_sign_recovered_state_conditioned": {
+        "mean": 0.9786,
+        "sd": 0.0133,
+        "ci95": [
+          0.9527,
+          1.0
+        ]
+      },
+      "discordant_sign_recovered_pooled": {
+        "mean": 0.0,
+        "sd": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_abs_pooled_estimate_discordant": {
+        "mean": 0.4005,
+        "sd": 0.0153,
+        "ci95": [
+          0.371,
+          0.4292
+        ]
+      },
+      "mean_abs_stratified_estimate_discordant": {
+        "mean": 0.755,
+        "sd": 0.0144,
+        "ci95": [
+          0.7258,
+          0.7814
+        ]
+      }
+    },
+    "r=1.0": {
+      "state_conditioned": {
+        "precision_at_k": {
+          "mean": 0.9998,
+          "sd": 0.002,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3138,
+          "sd": 0.0245,
+          "ci95": [
+            0.2659,
+            0.3623
+          ]
+        }
+      },
+      "pooled": {
+        "precision_at_k": {
+          "mean": 0.9959,
+          "sd": 0.0088,
+          "ci95": [
+            0.98,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3126,
+          "sd": 0.0245,
+          "ci95": [
+            0.2646,
+            0.3623
+          ]
+        }
+      },
+      "discordant_sign_recovered_state_conditioned": {
+        "mean": 1.0,
+        "sd": 0.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "discordant_sign_recovered_pooled": {
+        "mean": 0.0,
+        "sd": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_abs_pooled_estimate_discordant": {
+        "mean": 0.2152,
+        "sd": 0.0131,
+        "ci95": [
+          0.1903,
+          0.2399
+        ]
+      },
+      "mean_abs_stratified_estimate_discordant": {
+        "mean": 1.003,
+        "sd": 0.0146,
+        "ci95": [
+          0.9723,
+          1.0314
+        ]
+      }
+    },
+    "r=1.5": {
+      "state_conditioned": {
+        "precision_at_k": {
+          "mean": 0.9998,
+          "sd": 0.002,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3138,
+          "sd": 0.0245,
+          "ci95": [
+            0.2659,
+            0.3623
+          ]
+        }
+      },
+      "pooled": {
+        "precision_at_k": {
+          "mean": 0.9959,
+          "sd": 0.0088,
+          "ci95": [
+            0.98,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3126,
+          "sd": 0.0245,
+          "ci95": [
+            0.2646,
+            0.3623
+          ]
+        }
+      },
+      "discordant_sign_recovered_state_conditioned": {
+        "mean": 1.0,
+        "sd": 0.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "discordant_sign_recovered_pooled": {
+        "mean": 0.0,
+        "sd": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_abs_pooled_estimate_discordant": {
+        "mean": 0.1258,
+        "sd": 0.0089,
+        "ci95": [
+          0.1108,
+          0.1426
+        ]
+      },
+      "mean_abs_stratified_estimate_discordant": {
+        "mean": 1.253,
+        "sd": 0.0146,
+        "ci95": [
+          1.2223,
+          1.2814
+        ]
+      }
+    },
+    "pi1=0.5": {
+      "state_conditioned": {
+        "precision_at_k": {
+          "mean": 1.0,
+          "sd": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3139,
+          "sd": 0.0245,
+          "ci95": [
+            0.2659,
+            0.3623
+          ]
+        }
+      },
+      "pooled": {
+        "precision_at_k": {
+          "mean": 0.9993,
+          "sd": 0.0037,
+          "ci95": [
+            0.98,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3136,
+          "sd": 0.0244,
+          "ci95": [
+            0.2659,
+            0.3623
+          ]
+        }
+      },
+      "discordant_sign_recovered_state_conditioned": {
+        "mean": 1.0,
+        "sd": 0.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "discordant_sign_recovered_pooled": {
+        "mean": 0.0,
+        "sd": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_abs_pooled_estimate_discordant": {
+        "mean": 0.1263,
+        "sd": 0.0073,
+        "ci95": [
+          0.1136,
+          0.1399
+        ]
+      },
+      "mean_abs_stratified_estimate_discordant": {
+        "mean": 1.0017,
+        "sd": 0.0147,
+        "ci95": [
+          0.9706,
+          1.0269
+        ]
+      }
+    },
+    "pi1=0.6": {
+      "state_conditioned": {
+        "precision_at_k": {
+          "mean": 0.9998,
+          "sd": 0.002,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3138,
+          "sd": 0.0245,
+          "ci95": [
+            0.2659,
+            0.3623
+          ]
+        }
+      },
+      "pooled": {
+        "precision_at_k": {
+          "mean": 0.9959,
+          "sd": 0.0088,
+          "ci95": [
+            0.98,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3126,
+          "sd": 0.0245,
+          "ci95": [
+            0.2646,
+            0.3623
+          ]
+        }
+      },
+      "discordant_sign_recovered_state_conditioned": {
+        "mean": 1.0,
+        "sd": 0.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "discordant_sign_recovered_pooled": {
+        "mean": 0.0,
+        "sd": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_abs_pooled_estimate_discordant": {
+        "mean": 0.2152,
+        "sd": 0.0131,
+        "ci95": [
+          0.1903,
+          0.2399
+        ]
+      },
+      "mean_abs_stratified_estimate_discordant": {
+        "mean": 1.003,
+        "sd": 0.0146,
+        "ci95": [
+          0.9723,
+          1.0314
+        ]
+      }
+    },
+    "pi1=0.7": {
+      "state_conditioned": {
+        "precision_at_k": {
+          "mean": 0.9987,
+          "sd": 0.0053,
+          "ci95": [
+            0.98,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3134,
+          "sd": 0.0242,
+          "ci95": [
+            0.2659,
+            0.3603
+          ]
+        }
+      },
+      "pooled": {
+        "precision_at_k": {
+          "mean": 0.979,
+          "sd": 0.0208,
+          "ci95": [
+            0.92,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3072,
+          "sd": 0.024,
+          "ci95": [
+            0.2631,
+            0.3551
+          ]
+        }
+      },
+      "discordant_sign_recovered_state_conditioned": {
+        "mean": 0.9998,
+        "sd": 0.0013,
+        "ci95": [
+          0.9998,
+          1.0
+        ]
+      },
+      "discordant_sign_recovered_pooled": {
+        "mean": 0.0,
+        "sd": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_abs_pooled_estimate_discordant": {
+        "mean": 0.4001,
+        "sd": 0.0154,
+        "ci95": [
+          0.3698,
+          0.4303
+        ]
+      },
+      "mean_abs_stratified_estimate_discordant": {
+        "mean": 0.9998,
+        "sd": 0.0144,
+        "ci95": [
+          0.9728,
+          1.0269
+        ]
+      }
+    },
+    "sigma=0.5": {
+      "state_conditioned": {
+        "precision_at_k": {
+          "mean": 1.0,
+          "sd": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3139,
+          "sd": 0.0245,
+          "ci95": [
+            0.2659,
+            0.3623
+          ]
+        }
+      },
+      "pooled": {
+        "precision_at_k": {
+          "mean": 1.0,
+          "sd": 0.0,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3139,
+          "sd": 0.0245,
+          "ci95": [
+            0.2659,
+            0.3623
+          ]
+        }
+      },
+      "discordant_sign_recovered_state_conditioned": {
+        "mean": 1.0,
+        "sd": 0.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "discordant_sign_recovered_pooled": {
+        "mean": 0.0,
+        "sd": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_abs_pooled_estimate_discordant": {
+        "mean": 0.2003,
+        "sd": 0.0077,
+        "ci95": [
+          0.1855,
+          0.2146
+        ]
+      },
+      "mean_abs_stratified_estimate_discordant": {
+        "mean": 1.0015,
+        "sd": 0.0073,
+        "ci95": [
+          0.9862,
+          1.0157
+        ]
+      }
+    },
+    "sigma=1.0": {
+      "state_conditioned": {
+        "precision_at_k": {
+          "mean": 0.9998,
+          "sd": 0.002,
+          "ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3138,
+          "sd": 0.0245,
+          "ci95": [
+            0.2659,
+            0.3623
+          ]
+        }
+      },
+      "pooled": {
+        "precision_at_k": {
+          "mean": 0.9959,
+          "sd": 0.0088,
+          "ci95": [
+            0.98,
+            1.0
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.3126,
+          "sd": 0.0245,
+          "ci95": [
+            0.2646,
+            0.3623
+          ]
+        }
+      },
+      "discordant_sign_recovered_state_conditioned": {
+        "mean": 1.0,
+        "sd": 0.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "discordant_sign_recovered_pooled": {
+        "mean": 0.0,
+        "sd": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_abs_pooled_estimate_discordant": {
+        "mean": 0.2152,
+        "sd": 0.0131,
+        "ci95": [
+          0.1903,
+          0.2399
+        ]
+      },
+      "mean_abs_stratified_estimate_discordant": {
+        "mean": 1.003,
+        "sd": 0.0146,
+        "ci95": [
+          0.9723,
+          1.0314
+        ]
+      }
+    },
+    "sigma=2.0": {
+      "state_conditioned": {
+        "precision_at_k": {
+          "mean": 0.8459,
+          "sd": 0.0581,
+          "ci95": [
+            0.7195,
+            0.94
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.2649,
+          "sd": 0.0211,
+          "ci95": [
+            0.2263,
+            0.3104
+          ]
+        }
+      },
+      "pooled": {
+        "precision_at_k": {
+          "mean": 0.9137,
+          "sd": 0.0411,
+          "ci95": [
+            0.82,
+            0.98
+          ]
+        },
+        "anti_target_rate_at_k": {
+          "mean": 0.0019,
+          "sd": 0.0068,
+          "ci95": [
+            0.0,
+            0.02
+          ]
+        },
+        "recall_at_k_state2_SL": {
+          "mean": 0.2865,
+          "sd": 0.0226,
+          "ci95": [
+            0.2472,
+            0.331
+          ]
+        }
+      },
+      "discordant_sign_recovered_state_conditioned": {
+        "mean": 0.9721,
+        "sd": 0.0152,
+        "ci95": [
+          0.9386,
+          1.0
+        ]
+      },
+      "discordant_sign_recovered_pooled": {
+        "mean": 0.0,
+        "sd": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "mean_abs_pooled_estimate_discordant": {
+        "mean": 0.3007,
+        "sd": 0.021,
+        "ci95": [
+          0.2622,
+          0.3402
+        ]
+      },
+      "mean_abs_stratified_estimate_discordant": {
+        "mean": 1.011,
+        "sd": 0.0287,
+        "ci95": [
+          0.9532,
+          1.0641
+        ]
+      }
+    }
+  },
+  "C_learning": {
+    "n_replicates": 30,
+    "generative_parameters": {
+      "G": 4000,
+      "n_features": 24,
+      "f_sign_discordant": 0.06,
+      "label_noise_sd": 0.6,
+      "positive_rate": 0.12,
+      "model": "HistGradientBoostingClassifier(max_iter=200)",
+      "split": "random 50/50 gene-disjoint",
+      "k": 50
+    },
+    "results": {
+      "state_conditioned": {
+        "auprc_state1": {
+          "mean": 0.7906,
+          "sd": 0.0291,
+          "ci95": [
+            0.7447,
+            0.8474
+          ]
+        },
+        "auprc_state2": {
+          "mean": 0.7151,
+          "sd": 0.0404,
+          "ci95": [
+            0.6435,
+            0.793
+          ]
+        },
+        "auroc_state2": {
+          "mean": 0.9231,
+          "sd": 0.0218,
+          "ci95": [
+            0.8796,
+            0.9538
+          ]
+        },
+        "top_k_state2_wrong_state_hits": {
+          "mean": 0.0107,
+          "sd": 0.0146,
+          "ci95": [
+            0.0,
+            0.0455
+          ]
+        },
+        "discordant_score_gap": {
+          "mean": -0.0048,
+          "sd": 0.0229,
+          "ci95": [
+            -0.0389,
+            0.0393
+          ]
+        }
+      },
+      "state_agnostic": {
+        "auprc_state1": {
+          "mean": 0.4513,
+          "sd": 0.0761,
+          "ci95": [
+            0.3426,
+            0.5881
+          ]
+        },
+        "auprc_state2": {
+          "mean": 0.4058,
+          "sd": 0.0688,
+          "ci95": [
+            0.3149,
+            0.5233
+          ]
+        },
+        "auroc_state2": {
+          "mean": 0.8058,
+          "sd": 0.0331,
+          "ci95": [
+            0.7565,
+            0.864
+          ]
+        },
+        "top_k_state2_wrong_state_hits": {
+          "mean": 0.344,
+          "sd": 0.1027,
+          "ci95": [
+            0.189,
+            0.5365
+          ]
+        },
+        "discordant_score_gap": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  },
+  "C_learning_f_disc_sweep": {
+    "f_disc=0.02": {
+      "state_conditioned": {
+        "auprc_state1": {
+          "mean": 0.7938,
+          "sd": 0.0294,
+          "ci95": [
+            0.7508,
+            0.8532
+          ]
+        },
+        "auprc_state2": {
+          "mean": 0.7665,
+          "sd": 0.0319,
+          "ci95": [
+            0.7188,
+            0.8332
+          ]
+        },
+        "auroc_state2": {
+          "mean": 0.9439,
+          "sd": 0.0115,
+          "ci95": [
+            0.925,
+            0.9627
+          ]
+        },
+        "top_k_state2_wrong_state_hits": {
+          "mean": 0.008,
+          "sd": 0.0154,
+          "ci95": [
+            0.0,
+            0.0455
+          ]
+        },
+        "discordant_score_gap": {
+          "mean": -0.0073,
+          "sd": 0.0382,
+          "ci95": [
+            -0.085,
+            0.0533
+          ]
+        }
+      },
+      "state_agnostic": {
+        "auprc_state1": {
+          "mean": 0.4521,
+          "sd": 0.0776,
+          "ci95": [
+            0.3416,
+            0.6093
+          ]
+        },
+        "auprc_state2": {
+          "mean": 0.4387,
+          "sd": 0.072,
+          "ci95": [
+            0.3377,
+            0.5705
+          ]
+        },
+        "auroc_state2": {
+          "mean": 0.8324,
+          "sd": 0.0314,
+          "ci95": [
+            0.7856,
+            0.8902
+          ]
+        },
+        "top_k_state2_wrong_state_hits": {
+          "mean": 0.326,
+          "sd": 0.0949,
+          "ci95": [
+            0.1545,
+            0.4475
+          ]
+        },
+        "discordant_score_gap": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "f_disc=0.1": {
+      "state_conditioned": {
+        "auprc_state1": {
+          "mean": 0.7888,
+          "sd": 0.0307,
+          "ci95": [
+            0.7258,
+            0.8312
+          ]
+        },
+        "auprc_state2": {
+          "mean": 0.6613,
+          "sd": 0.0445,
+          "ci95": [
+            0.5932,
+            0.7516
+          ]
+        },
+        "auroc_state2": {
+          "mean": 0.9013,
+          "sd": 0.0261,
+          "ci95": [
+            0.8566,
+            0.94
+          ]
+        },
+        "top_k_state2_wrong_state_hits": {
+          "mean": 0.0153,
+          "sd": 0.0187,
+          "ci95": [
+            0.0,
+            0.051
+          ]
+        },
+        "discordant_score_gap": {
+          "mean": -0.0,
+          "sd": 0.0168,
+          "ci95": [
+            -0.0277,
+            0.034
+          ]
+        }
+      },
+      "state_agnostic": {
+        "auprc_state1": {
+          "mean": 0.4458,
+          "sd": 0.0733,
+          "ci95": [
+            0.3378,
+            0.5936
+          ]
+        },
+        "auprc_state2": {
+          "mean": 0.3773,
+          "sd": 0.0662,
+          "ci95": [
+            0.2885,
+            0.5098
+          ]
+        },
+        "auroc_state2": {
+          "mean": 0.7788,
+          "sd": 0.0387,
+          "ci95": [
+            0.7255,
+            0.8602
+          ]
+        },
+        "top_k_state2_wrong_state_hits": {
+          "mean": 0.362,
+          "sd": 0.0993,
+          "ci95": [
+            0.1945,
+            0.5455
+          ]
+        },
+        "discordant_score_gap": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "f_disc=0.15": {
+      "state_conditioned": {
+        "auprc_state1": {
+          "mean": 0.7883,
+          "sd": 0.0253,
+          "ci95": [
+            0.7373,
+            0.8346
+          ]
+        },
+        "auprc_state2": {
+          "mean": 0.6017,
+          "sd": 0.0536,
+          "ci95": [
+            0.4974,
+            0.6924
+          ]
+        },
+        "auroc_state2": {
+          "mean": 0.8788,
+          "sd": 0.0329,
+          "ci95": [
+            0.8145,
+            0.9231
+          ]
+        },
+        "top_k_state2_wrong_state_hits": {
+          "mean": 0.026,
+          "sd": 0.0284,
+          "ci95": [
+            0.0,
+            0.0855
+          ]
+        },
+        "discordant_score_gap": {
+          "mean": 0.007,
+          "sd": 0.0149,
+          "ci95": [
+            -0.0175,
+            0.03
+          ]
+        }
+      },
+      "state_agnostic": {
+        "auprc_state1": {
+          "mean": 0.4513,
+          "sd": 0.0668,
+          "ci95": [
+            0.3543,
+            0.5753
+          ]
+        },
+        "auprc_state2": {
+          "mean": 0.3346,
+          "sd": 0.0604,
+          "ci95": [
+            0.2488,
+            0.4527
+          ]
+        },
+        "auroc_state2": {
+          "mean": 0.745,
+          "sd": 0.0449,
+          "ci95": [
+            0.6806,
+            0.8352
+          ]
+        },
+        "top_k_state2_wrong_state_hits": {
+          "mean": 0.4033,
+          "sd": 0.091,
+          "ci95": [
+            0.2545,
+            0.5655
+          ]
+        },
+        "discordant_score_gap": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  },
+  "D_design": {
+    "per_arm_80pct": {
+      "standardised_effect=0.5": {
+        "n_replicates_per_arm": 34,
+        "power_per_arm": 0.8078,
+        "joint_power_both_signs": 0.6525
+      },
+      "standardised_effect=0.8": {
+        "n_replicates_per_arm": 15,
+        "power_per_arm": 0.8213,
+        "joint_power_both_signs": 0.6745
+      },
+      "standardised_effect=1.0": {
+        "n_replicates_per_arm": 10,
+        "power_per_arm": 0.8031,
+        "joint_power_both_signs": 0.645
+      },
+      "standardised_effect=1.5": {
+        "n_replicates_per_arm": 6,
+        "power_per_arm": 0.8325,
+        "joint_power_both_signs": 0.6931
+      },
+      "standardised_effect=2.0": {
+        "n_replicates_per_arm": 5,
+        "power_per_arm": 0.9089,
+        "joint_power_both_signs": 0.8261
+      }
+    },
+    "joint_80pct": {
+      "standardised_effect=0.5": {
+        "n_replicates_per_arm": 44,
+        "joint_power": 0.8101
+      },
+      "standardised_effect=0.8": {
+        "n_replicates_per_arm": 19,
+        "joint_power": 0.8267
+      },
+      "standardised_effect=1.0": {
+        "n_replicates_per_arm": 13,
+        "joint_power": 0.8294
+      },
+      "standardised_effect=1.5": {
+        "n_replicates_per_arm": 7,
+        "joint_power": 0.8239
+      },
+      "standardised_effect=2.0": {
+        "n_replicates_per_arm": 5,
+        "joint_power": 0.8261
+      }
+    },
+    "test": "one-sided one-sample t-test per HR state, Bonferroni alpha/2, sign reversal declared only if both arms reject in opposite directions"
+  }
+}
