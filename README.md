@@ -1,13 +1,13 @@
 # HR-StateSL
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23818329.svg)](https://doi.org/10.5281/zenodo.23818329)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23818328.svg)](https://doi.org/10.5281/zenodo.23818328)
 
 Code, stored results and a curated, evidence-typed, state-conditioned edge resource accompanying the manuscript:
 
 > **Machine learning cannot recover what pooling removes: genetic context bounds synthetic lethal target discovery in breast cancer**
 > Sambhaji Balaso Thakar and Pradnya Namdev Ghorpade
 
-The manuscript has been prepared for submission to *Biostatistics* (Oxford University Press). This README will be updated with the article's DOI if and when it is published. The archived release of this repository is at https://doi.org/10.5281/zenodo.23818329.
+The manuscript has been prepared for submission to *Biostatistics* (Oxford University Press). This README will be updated with the article's DOI if and when it is published. The archived release of this repository is at https://doi.org/10.5281/zenodo.23818328.
 
 ## What the work shows
 
